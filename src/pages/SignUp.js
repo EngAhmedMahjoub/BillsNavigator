@@ -13,7 +13,20 @@ const SignUpSchema = Yup.object().shape({
     return (
       <div>
         <h1>Sign Up</h1>
-        
+        <Formik
+          initialValues={{ username: '', email: '', password: '' }}
+          validationSchema={SignUpSchema}
+          onSubmit={(values, { setSubmitting }) => {
+            axios.post('/api/register', values).then(response => {
+              console.log(response.data);
+              setSubmitting(false);
+            }).catch(error => {
+              console.error(error);
+              setSubmitting(false);
+            });
+          }}
+        >
+        </Formik>
       </div>
     );
   };
