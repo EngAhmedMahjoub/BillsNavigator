@@ -9,9 +9,7 @@ import Footer from './Footer';
 const AuthPage = () => {
   return (
     <div className="auth-page">
-      <div className="auth-links">
-        <Header />
-      </div>
+      <Header />
       <div className="auth-form">
         <Routes>
           <Route path="login" element={<Login />} />

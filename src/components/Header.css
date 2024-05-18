@@ -1,24 +1,22 @@
-/* src/components/Header.css */
 .header {
-    background-color: #007bff;
-    padding: 10px 0;
-    color: #ffffff;
-    text-align: center;
-  }
-  
-  .nav {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-  }
-  
-  .nav-link {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  .nav-link:hover {
-    text-decoration: underline;
-  }
-  
+  background-color: #007bff;
+  padding: 10px 0;
+  color: #ffffff;
+  width: 100%;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.nav-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
