@@ -4,6 +4,7 @@ import SignUp from './SignUp';
 import Login from './Login';
 import './AuthPage.css';
 import Header from './Header';
+import Footer from './Footer';
 
 const AuthPage = () => {
   return (
@@ -17,6 +18,7 @@ const AuthPage = () => {
           <Route path="signup" element={<SignUp />} />
         </Routes>
       </div>
+      <Footer />
     </div>
   );
 };
