@@ -26,6 +26,16 @@ const SignUpSchema = Yup.object().shape({
             });
           }}
         >
+          {({ isSubmitting }) => (
+            <Form>
+              <Field type="text" name="username" placeholder="Username" />
+              <Field type="email" name="email" placeholder="Email" />
+              <Field type="password" name="password" placeholder="Password" />
+              <button type="submit" disabled={isSubmitting}>
+                Sign Up
+              </button>
+            </Form>
+          )}
         </Formik>
       </div>
     );
