@@ -9,6 +9,14 @@ const SignUpSchema = Yup.object().shape({
     password: Yup.string().min(6, 'Too Short!').required('Required'),
   });
   
+  const SignUp = () => {
+    return (
+      <div>
+        <h1>Sign Up</h1>
+        
+      </div>
+    );
+  };
   
   export default SignUp;
   
