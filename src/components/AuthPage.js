@@ -3,13 +3,13 @@ import { Link, Route, Routes } from 'react-router-dom';
 import SignUp from './SignUp';
 import Login from './Login';
 import './AuthPage.css';
+import Header from './Header';
 
 const AuthPage = () => {
   return (
     <div className="auth-page">
       <div className="auth-links">
-        <Link to="/auth/login" className="auth-link">Login</Link>
-        <Link to="/auth/signup" className="auth-link">Sign Up</Link>
+        <Header />
       </div>
       <div className="auth-form">
         <Routes>
