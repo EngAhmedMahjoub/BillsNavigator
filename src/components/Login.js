@@ -1,7 +1,9 @@
+// src/components/Login.js
 import React from 'react';
-import { Formik, Form, Field } from 'formik';
+import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import axios from 'axios';
+import './Login.css';
 
 const LoginSchema = Yup.object().shape({
   email: Yup.string().email('Invalid email').required('Required'),
@@ -10,7 +12,7 @@ const LoginSchema = Yup.object().shape({
 
 const Login = () => {
   return (
-    <div>
+    <div className="login-container">
       <h1>Login</h1>
       <Formik
         initialValues={{ email: '', password: '' }}
@@ -26,10 +28,16 @@ const Login = () => {
         }}
       >
         {({ isSubmitting }) => (
-          <Form>
-            <Field type="email" name="email" placeholder="Email" />
-            <Field type="password" name="password" placeholder="Password" />
-            <button type="submit" disabled={isSubmitting}>
+          <Form className="login-form">
+            <div className="form-group">
+              <Field type="email" name="email" placeholder="Email" className="form-field" />
+              <ErrorMessage name="email" component="div" className="error-message" />
+            </div>
+            <div className="form-group">
+              <Field type="password" name="password" placeholder="Password" className="form-field" />
+              <ErrorMessage name="password" component="div" className="error-message" />
+            </div>
+            <button type="submit" disabled={isSubmitting} className="submit-button">
               Login
             </button>
           </Form>
