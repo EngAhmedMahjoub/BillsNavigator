@@ -13,6 +13,7 @@ const Login = () => {
   return (
     <div className="login-container">
       <h1>Login</h1>
+      <p>Track your personal cashflow?</p>
       <Formik
         initialValues={{ email: '', password: '' }}
         validationSchema={LoginSchema}
