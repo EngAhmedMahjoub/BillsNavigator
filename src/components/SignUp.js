@@ -13,6 +13,7 @@ const SignUpSchema = Yup.object().shape({
     return (
       <div className='signup-container'>
         <h1>Sign Up</h1>
+        <p>Create a new account for free.</p>
         <Formik
           initialValues={{ username: '', email: '', password: '' }}
           validationSchema={SignUpSchema}
@@ -37,7 +38,7 @@ const SignUpSchema = Yup.object().shape({
               <div className='form-group'>
                 <Field type="password" name="password" placeholder="Password" className="form-field"/>
               </div>
-              <button type="submit" disabled={isSubmitting}>
+              <button type="submit" disabled={isSubmitting} className='submit-button'>
                 Sign Up
               </button>
             </Form>
