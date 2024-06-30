@@ -37,6 +37,15 @@
     box-sizing: border-box;
   }
 
+  .error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+    text-align: left;
+    width: 100%; 
+  }
+  
+
   .submit-button {
     padding: 10px;
     border: none;
